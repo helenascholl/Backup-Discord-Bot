@@ -5,6 +5,8 @@ services:
         build: .
         command: npm start
         env_file: .env
+        environment:
+            GOOGLE_APPLICATION_CREDENTIALS: credentials.json
         volumes:
             - .:/usr/src/app
             - /usr/src/app/node_modules
