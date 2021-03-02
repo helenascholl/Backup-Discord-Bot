@@ -1,6 +1,6 @@
 # Backup-Discord-Bot
 
-Automatically backup images.
+Automatically back up images in Discord channels to Google Drive.
 
 ## Invite the bot
 
