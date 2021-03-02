@@ -58,6 +58,20 @@ async function initGoogleDrive() {
     }
 }
 
+async function findOrCreateFolder(name, parent, role) {
+    let folder = await driveApi.findFolder(name, parent);
+
+    if (folder) {
+        console.log(`Folder '${name}' already exists: ${folder.shareLink}`);
+        return folder;
+    }
+
+    folder = await driveApi.createFolder(name, parent, role);
+    console.log(`Created folder '${name}': ${folder.shareLink}`);
+
+    return folder;
+}
+
 function startClient() {
     client.login(process.env['DISCORD_TOKEN']).catch(console.error);
 }
