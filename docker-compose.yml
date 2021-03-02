@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+    your-bot:
+        build: .
+        command: npm start
+        env_file: .env
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
