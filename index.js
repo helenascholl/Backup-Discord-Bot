@@ -43,18 +43,11 @@ initGoogleDrive()
     .then(startClient);
 
 async function initGoogleDrive() {
-    const rootFolderId = await driveApi.findFolder(config.rootFolder);
+    const rootFolder = await findOrCreateFolder(config.rootFolder, null, 'writer');
 
     for (const channel of config.channels) {
-        const folderId = await driveApi.findFolder(channel.backupFolder, rootFolderId);
-
-        if (folderId) {
-            console.log(`Folder ${channel.backupFolder} already exists`);
-            channel.backupFolderId = folderId;
-        } else {
-            console.log(`Creating folder ${channel.backupFolder}`);
-            channel.backupFolderId = await driveApi.createFolder(channel.backupFolder, rootFolderId);
-        }
+        const folder = await findOrCreateFolder(channel.backupFolder, rootFolder.id, 'writer');
+        channel.backupFolderId = folder.id;
     }
 }
 
