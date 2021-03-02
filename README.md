@@ -17,14 +17,13 @@ If you want to run the bot yourself, [create a new Discord Bot](https://discorda
  - [Create a Service Account](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
  - [Create a Service Account Key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
  - Save the key as `credentials.json` in your project root (do not commit this file)
- - Share the Google Drive folder you want to back up your images to with the service account (The email address looks like this: sa-name@project-id.iam.gserviceaccount.com)
 
 ### Configure the Bot
 
 All the configuration for your bot is done in `config.json`:
- - `rootFolder`: The folder containing all the folders with the backups of your channels
+ - `rootFolder`: The folder containing all the folders with the backups of your channels (Gets created by the bot)
  - `channel.id`: [The ID of a Discord text channel](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
- - `channel.backupFolder`: The name of the folder to contain the backups of the specified channel (If the folder doesn't exist yet, the bot will create it)
+ - `channel.backupFolder`: The name of the folder to contain the backups of the specified channel (Gets created by the bot)
 
 ### Start the Bot
 
