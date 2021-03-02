@@ -1,0 +1,13 @@
+{
+  "rootFolder": "Discord Backup",
+  "channels": [
+    {
+      "id": "012345678901234567",
+      "backupFolder": "Memes"
+    },
+    {
+      "id": "987654321098765432",
+      "backupFolder": "Images"
+    }
+  ]
+}
