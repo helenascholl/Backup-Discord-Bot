@@ -1,10 +1,10 @@
-# Your-Bot
+# Backup-Discord-Bot
 
-Some description.
+Automatically backup images.
 
 ## Invite the bot
 
-https://discordapp.com/oauth2/authorize?&client_id=[CLIENT ID]&scope=bot&permissions=[PERMISSIONS]
+https://discordapp.com/oauth2/authorize?&client_id=816259244587221022&scope=bot&permissions=0
 
 ## For Developers
 
